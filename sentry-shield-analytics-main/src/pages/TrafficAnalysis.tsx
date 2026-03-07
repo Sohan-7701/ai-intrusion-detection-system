@@ -100,7 +100,7 @@ export default function TrafficAnalysis() {
       const newEntry: TrafficEntry = {
         id: Date.now().toString(),
         flowId: `FLW-${Math.floor(Math.random() * 100000)}`,
-        protocol: selected.name,
+        protocol: selected.name as "TCP" | "UDP" | "ICMP",
         packetRate: Math.floor(Math.random() * 12000),
         flowDuration: Math.random() * 120,
         prediction: prediction,

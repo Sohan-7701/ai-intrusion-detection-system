@@ -1,16 +1,4 @@
-function getBackendURL() {
-  const { hostname } = window.location;
-
-  // If frontend is opened on localhost
-  if (hostname === "localhost" || hostname === "127.0.0.1") {
-    return "http://127.0.0.1:8000";
-  }
-
-  // If frontend is opened via network IP
-  return `http://${hostname}:8000`;
-}
-
-const BACKEND_URL = getBackendURL();
+const BACKEND_URL = "https://ids-backend-3yac.onrender.com";
 
 export interface PredictResponse {
   prediction: "Intrusion Detected" | "Normal Traffic";
